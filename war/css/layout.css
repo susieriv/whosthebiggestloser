@@ -1,0 +1,174 @@
+body, html {margin: 0;padding: 0;width: 100%;height: 100%; overflow: hidden;}
+
+body{background-color: #70877F}
+
+@font-face {font-family: 'densia';  src: url('DensiaSans.otf');}
+@font-face {font-family: 'greatvibes'; src: url('GreatVibes.otf');}
+@font-face {font-family: 'pacifico'; src: url('Pacifico.ttf');}
+@font-face {font-family: 'fontello'; src: url('fontello.ttf');}
+
+/*-----------------*\
+|      ACCUEIL      |
+\*-----------------*/
+.logodiv {
+     margin-top: 2.5vmax;
+    /*centrer*/ display: block; margin-left: auto; margin-right: auto;
+    /*image*/
+    background-image: url("clock.jpg");
+    background-size: 20vmax;
+    background-repeat: no-repeat;
+    height: 20vmax;
+    width: 20vmax;
+    /*cercle*/ border-radius: 10vmax;
+}
+
+/*** MESSAGE ***/
+.msgdiv {
+	margin-top : 1vmax;
+	font-size : 2vmax;
+	display: block; margin-left: auto; margin-right: auto;
+	font-family: 'densia';
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/*** BOUTON ***/
+button {
+    width: 18vmax;
+    height: 12vmax;
+    font-family: 'pacifico';
+    color: #ffffff;
+    font-size: 2.3vmax;
+    background: #D9241B;
+    border : 1px solid #D9241B;
+    margin : 2vmin;
+}
+
+button:hover {background: #3D3234; border : 1px solid #3D3234;}
+
+#centrer {text-align: center;}
+
+#btnaccueil {margin: 2vh 0 2vh 0;}
+
+.footer {font-family: 'densia'; color: #ffffff;}
+
+/****** FIN ACCUEIL ******/
+
+/*-----------------*\
+|    OU SUIS-JE      |
+\*-----------------*/
+#logoousuisje {
+    margin-top: 4vmax;
+    display: block; margin-left: auto; margin-right: auto;
+    background-image: url("oldclock.jpg");
+    background-size: 25vmax;
+    background-repeat: no-repeat;
+    height: 17vmax;
+    width: 17vmax;
+    /*cercle*/ border-radius: 10vmax;
+}
+
+h1 {font-family : 'pacifico'; text-align:center}
+
+h3 {font-family : 'densia';	margin-left : 35vw; margin-right: 35vw; text-align:justify}
+
+/****** FIN OU SUIS-JE ******/
+
+/*-----------------------------*\
+|       POPUP + FOND GRISE      |
+\*-----------------------------*/
+.popup, #popuprank, #popupfaq, #popupagenda, #popupprofil, #popupinterest {
+    position: absolute;
+    top : 5vh;
+    left: 8vw;
+    width: 84vw;
+    height: 90vh;
+    background-color: #E2E5D1;
+    border: 1vmin solid #3D3234;
+    font-family: 'pacifico';
+    text-align: center;
+    overflow : auto;
+}
+
+.greyscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+}
+
+/*** bouton fermeture ***/
+[class^="icon-"]:before, [class*=" icon-"]:before {font-family: "fontello"; text-decoration: inherit;}
+.icon-cancel:before {content: '\e800'; font-size: 3vw; color: #70877F; position: absolute; top: 1vh; left: 80vw;}
+
+
+/*-----------------------------*\
+|       MENU (5 bandeaux)       |
+\*-----------------------------*/
+
+.bandeau1, .bandeau2, .bandeau3, .bandeau4, .bandeau5  {width: 90vw; margin: 4vh 5vw; height: 14vh; line-height: 14vh; font-family: 'pacifico'; font-size: 5vh; background-size: 90vw;}
+
+.bandeau1 {margin-top: 7vh; background-image: url("pat9.jpg"); background-position: 0 35%;}
+.bandeau2 {background-image: url("velo.jpeg"); background-position: 0 80%;}
+.bandeau3 {color : #fff; background-image: url("pat8.jpg"); background-position: 0 90%;}
+.bandeau4 {background-image: url("clock1.jpg");background-position: 80%;}
+.bandeau5 {background-image: url("balloon.jpg"); background-position: 0 50%;}
+
+.bandeau1:hover, .bandeau2:hover, .bandeau3:hover, .bandeau4:hover, .bandeau5:hover {
+    background-color : #D9241B;
+    color: #fff;
+    background-image: none;
+}
+
+.pos {margin-left: 5vw;}
+
+/*-----------------------------*\
+|       POPUP RANK              |
+\*-----------------------------*/
+#ranksem, #rankmois {display: inline-block;}
+
+#ranksem {margin-left: -20vw;}
+#rankmois {margin-left: 4vw;}
+
+.title {font-size: 5vh;}
+
+.contentrank {background-color: #3D3234; font-family: 'densia'; width: 25vw; height: 70vh;}
+
+#imgrank {position : absolute; top: 10vh; left: 65vw; width: 20vw; height: 30vh; background-image: url("couronne.png"); background-repeat: no-repeat; background-size: 30vh;}
+
+/*-----------------------------*\
+|       POPUP FAQ               |
+\*-----------------------------*/
+
+/*-----------------------------*\
+|       POPUP INTEREST          |
+\*-----------------------------*/
+#ti {text-align: left;font-family: "densia"; font-size: 3vmin;}
+
+#ti li {list-style-type: none; padding: 0.5vw 1vw 0.5vw 1vw; margin: 0.5vw 1vw 0.5vw -3vw; width: 19.5vw;}
+
+.inotselect {background-color: #70877F;}
+.inotselect:hover {background-color: #3D3234; color: #fff;}
+/*.inotselect.ng-enter {background-color: #3D3234; color: #fff;}*/
+
+#ti th {padding: 2.6vw; width: 20vw;}
+
+.submit {
+    width: 20vmax;
+    height: 5vmax;
+    font-family: 'pacifico';
+    color: #ffffff;
+    font-size: 1.4vmax;
+    background: #D9241B;
+    border : 1px solid #D9241B;
+}
+
+.submit:hover {background: #3D3234; border : 1px solid #3D3234;}
+
+

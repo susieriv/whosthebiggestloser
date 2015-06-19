@@ -1,0 +1,66 @@
+<meta charset="utf-8">
+
+<!------------------------>
+<!--   MENU PRINCIPAL   --> 
+<!------------------------>
+<div class="bandeau1" ng-click="profil()"><div class="pos">Mon profil</div></div>
+<div class="bandeau2" ng-click="interest()"><div class="pos">Mes centres d'intérêts</div></div>
+<div class="bandeau3" ng-click="FAQ()"><div class="pos">FAQ</div></div>
+<div class="bandeau4" ng-click="agenda()"><div class="pos">Agenda</div></div>
+<div class="bandeau5" ng-click="ranking()"><div class="pos">Classement</div></div>
+
+<div class="greyscreen" ng-show="greyscreen"></div>
+
+<!------------------------>
+<!--   ECRAN PROFIL     --> 
+<!------------------------>
+<div id="popupprofil" ng-show="showprofil">
+	<div class="icon-cancel" ng-click="close()"></div>
+	<div class="title">Mon profil</div>
+</div>
+
+<!------------------------>
+<!--   ECRAN INTERET    --> 
+<!------------------------>
+<div id="popupinterest" ng-show="showinterest">
+	<div class="icon-cancel" ng-click="close()"></div>
+	<div class="title">Centre d'intérêt</div>
+	<form ng-submit="modifinteret()">
+	<table id="ti"><tr>
+		<th><ul><li ng-repeat="s in style" class="inotselect" nf-if="checked"><input type="checkbox" ng-model="checked"/>{{s.label}}</li></ul></th>
+		<th><ul><li ng-repeat="sbis in stylebis" class="inotselect" nf-if="checked"><input type="checkbox" ng-model="checked"/>{{sbis.label}}</li></ul></th>
+		<th><ul><li ng-repeat="ster in styleter" class="inotselect" nf-if="checked"><input type="checkbox" ng-model="checked"/>{{ster.label}}</li></ul></th>
+	</tr></table>
+	<input type="submit" value="Enregistrer les modifications" class="submit"/>
+	</form>
+</div>
+
+<!------------------------>
+<!--   ECRAN FAQ        --> 
+<!------------------------>
+<div id="popupfaq" ng-show="showFAQ">
+	<div class="icon-cancel" ng-click="close()"></div>
+	<div class="title">Foire aux questions</div>
+</div>
+
+<!------------------------>
+<!--   ECRAN AGENDA     --> 
+<!------------------------>
+<div id="popupagenda" ng-show="showagenda">
+	<div class="icon-cancel" ng-click="close()"></div>
+	<div class="title">Agenda</div>
+	<div ng-repeat="e in event">
+    	<p>{{e.fields.titre}} | {{e.fields.commune}} | {{e.fields.jour_min}} | {{e.fields.jour_max}} | {{e.fields.categorie}}</p>
+  	</div>
+</div>
+
+<!------------------------>
+<!--   ECRAN RANKING    --> 
+<!------------------------>
+<div id="popuprank" ng-show="showranking">
+	<div class="icon-cancel" ng-click="close()"></div>
+	<div class="title">Classement</div>
+	<div id="ranksem">Loosers de la semaine<div class="contentrank"></div></div>
+	<div id="rankmois">Loosers du mois<div class="contentrank"></div></div>
+	<div id="imgrank"></div>
+</div>
