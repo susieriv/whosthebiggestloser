@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 
+
 <!------------------------>
 <!--   MENU PRINCIPAL   --> 
 <!------------------------>
@@ -41,6 +42,17 @@
 <div id="popupfaq" ng-show="showFAQ">
 	<div class="icon-cancel" ng-click="close()"></div>
 	<div class="title">Foire aux questions</div>
+	
+	<div id ="listefaq" ng-repeat="q in questions">
+	    <h4 id="titrefaq">{{q.titre}}</h4>
+	    <p>{{q.reponse}}</p>
+  	</div>
+  	
+  	<button id="btnfaq" ng-click="showformfaq()">Poser une question</button>
+  	<form id="formfaq" ng-show="formfaq" ng-submit="newfaq()">
+	    <input type="text" ng-model="question" placeholder="Question"><br>
+	    <input id="faqsubmit" type="submit" value="Envoyer">
+  	</form>
 </div>
 
 <!------------------------>
@@ -48,9 +60,17 @@
 <!------------------------>
 <div id="popupagenda" ng-show="showagenda">
 	<div class="icon-cancel" ng-click="close()"></div>
-	<div class="title">Agenda</div>
-	<div ng-repeat="e in event">
-    	<p>{{e.fields.titre}} | {{e.fields.commune}} | {{e.fields.jour_min}} | {{e.fields.jour_max}} | {{e.fields.categorie}}</p>
+	<div class="titleagenda">Agenda</div>
+	<div id="events" ng-repeat="e in event">
+		<table>
+			<tr>
+				<td class="eventstd1">{{e.fields.titre}}</td><td>|</td>
+				<td class="eventstd2">{{e.fields.commune}}</td><td>|</td>
+				<td class="eventstd3">{{e.fields.jour_min}}</td><td>|</td>
+				<td class="eventstd4">{{e.fields.jour_max}}</td><td>|</td>
+				<td class="eventstd5">{{e.fields.categorie}}</td>
+			</tr>
+		</table>
   	</div>
 </div>
 

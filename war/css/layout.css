@@ -47,7 +47,7 @@ button {
     margin : 2vmin;
 }
 
-button:hover {background: #3D3234; border : 1px solid #3D3234;}
+button:hover, #btnfaq:hover {background: #3D3234; border : 1px solid #3D3234;}
 
 #centrer {text-align: center;}
 
@@ -61,15 +61,23 @@ button:hover {background: #3D3234; border : 1px solid #3D3234;}
 |    OU SUIS-JE      |
 \*-----------------*/
 #logoousuisje {
-    margin-top: 4vmax;
+    margin-top: 2vmax;
     display: block; margin-left: auto; margin-right: auto;
     background-image: url("oldclock.jpg");
-    background-size: 25vmax;
+    background-size: 19vmax; height: 14vmax; width: 14vmax;
     background-repeat: no-repeat;
-    height: 17vmax;
-    width: 17vmax;
-    /*cercle*/ border-radius: 10vmax;
+    border-radius: 10vmax;
 }
+
+#totoro {
+    display: block; margin-left: auto; margin-right: auto;
+    background-image: url("totoro.png");
+    background-size: 8vmax; height: 8vmax; width: 8vmax;
+    background-repeat: no-repeat;
+    border-radius: 10vmax;
+}
+
+#pote {display: block; margin-left: auto; margin-right: auto; font-family : 'densia';	text-align : center;}
 
 h1 {font-family : 'pacifico'; text-align:center}
 
@@ -136,7 +144,7 @@ h3 {font-family : 'densia';	margin-left : 35vw; margin-right: 35vw; text-align:j
 #ranksem {margin-left: -20vw;}
 #rankmois {margin-left: 4vw;}
 
-.title {font-size: 5vh;}
+.title, .titleagenda {font-size: 5vh;}
 
 .contentrank {background-color: #3D3234; font-family: 'densia'; width: 25vw; height: 70vh;}
 
@@ -146,6 +154,31 @@ h3 {font-family : 'densia';	margin-left : 35vw; margin-right: 35vw; text-align:j
 |       POPUP FAQ               |
 \*-----------------------------*/
 
+#listefaq {
+	font-family: 'densia';
+	text-align : left;
+	padding-left: 5vw; padding-right: 5vw;
+	font-size: 3.5vh;
+}
+
+#titrefaq {font-family: 'pacifico';}
+
+#btnfaq, #faqsubmit {   
+    line-height : 3vmax;
+    font-family: 'pacifico'; color: #ffffff;
+    font-size: 1.3vmax;
+    background: #D9241B;
+    border : 1px solid #D9241B;
+    margin : 2vmin;
+}
+    
+#btnfaq {width: 16vmax; height: 3vmax;}
+
+#faqsubmit {width: 8vmax; height: 2.8vmax;}
+
+#formfaq {text-align: left;	margin-left: 5vw;
+	
+}
 /*-----------------------------*\
 |       POPUP INTEREST          |
 \*-----------------------------*/
@@ -171,4 +204,17 @@ h3 {font-family : 'densia';	margin-left : 35vw; margin-right: 35vw; text-align:j
 
 .submit:hover {background: #3D3234; border : 1px solid #3D3234;}
 
+/*-----------------------------*\
+|       POPUP AGENDA            |
+\*-----------------------------*/
+.titleagenda {margin-bottom : 3vh;}
 
+#events {font-family: "densia";}
+
+#f1 {width : 10vw;}
+
+#events table {text-align:center; margin-left:auto; margin-right:auto; position:block;}
+
+.eventstd1, .eventstd5 {width : 25vw;}
+.eventstd2 {width : 10vw;}
+.eventstd3, .eventstd4 {width : 5vw;}
